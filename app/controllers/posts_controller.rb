@@ -11,5 +11,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def create
+    @post = Post.create(title: params[:title], description: params[:description])
+    render :show
+  end
+
   # add create method here
 end
